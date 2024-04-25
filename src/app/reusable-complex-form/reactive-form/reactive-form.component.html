@@ -1,0 +1,15 @@
+<form [formGroup]="reactiveFormControl">
+  <div class="form-group">
+    <label for="subForm">First Name: </label>
+    <app-reusable-form
+      id="subForm"
+      formControlName="subForm"
+    ></app-reusable-form>
+  </div>
+  <div class="form-group">
+    <label for="someField">someField: </label>
+    <input id="someField" type="text" formControlName="someField" />
+  </div>
+  {{ reactiveFormControl.value| json }}
+  <button (click)="logForm()">print log</button>
+</form>

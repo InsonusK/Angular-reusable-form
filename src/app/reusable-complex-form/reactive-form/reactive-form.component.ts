@@ -8,8 +8,11 @@ import { FormBuilder } from '@angular/forms';
   styleUrl: './reactive-form.component.scss'
 })
 export class ReactiveFormComponent {
+  logForm() {
+    console.log(this.reactiveFormControl)
+  }
   reactiveFormControl = new ReactiveFormControl(this.fb);
-  constructor(private fb:FormBuilder){
+  constructor(private fb: FormBuilder) {
 
   }
 }

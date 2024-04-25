@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()" #templateForm="ngForm">
+  <div class="form-group">
+    <label for="subForm">subForm:</label>
+    <app-reusable-form
+      id="subForm"
+      [(ngModel)]="model.subForm" name="subForm"
+    ></app-reusable-form>
+  </div>
+  <div class="form-group">
+    <label for="someField">someField: </label>
+    <input id="someField" type="text" [(ngModel)]="model.someField" name="someField"/>
+  </div>
+  {{ model | json }}
+  <button type="submit">print log</button>
+</form>

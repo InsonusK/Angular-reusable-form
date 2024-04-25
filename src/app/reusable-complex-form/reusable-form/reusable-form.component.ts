@@ -23,7 +23,7 @@ import { ReusableFormModel } from './reusable-form.model';
 })
 export class ReusableFormComponent implements ControlValueAccessor, Validator, OnDestroy {
   destroySubject = new Subject<void>();
-  formControl = new ReusableFormControl(this.fb);
+  public formControl = new ReusableFormControl(this.fb);
   
   constructor(private fb:FormBuilder){}
 
